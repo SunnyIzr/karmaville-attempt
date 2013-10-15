@@ -1,4 +1,9 @@
 <h1>KarmaVille's Most Famous</h1>
+<div class="pagination">
+	<ul class="pagination">
+		 <%= render 'pagination', :page => @page, :paginate =>@paginate %>
+	</ul>
+</div>
 <table class="table table-bordered table-striped">
   <tr>
     <th>Karma</th>
