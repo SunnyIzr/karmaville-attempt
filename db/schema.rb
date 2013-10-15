@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(:version => 20131014221710) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "karma_points", ["user_id"], :name => "index_karma_points_on_user_id"
+
   create_table "users", :force => true do |t|
     t.string   "first_name",               :null => false
     t.string   "last_name",                :null => false
@@ -28,6 +30,9 @@ ActiveRecord::Schema.define(:version => 20131014221710) do
     t.string   "email",                    :null => false
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
+    t.integer  "score"
   end
+
+  add_index "users", ["score"], :name => "index_users_on_score"
 
 end
